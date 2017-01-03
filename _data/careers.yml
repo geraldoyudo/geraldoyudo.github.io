@@ -1,56 +1,70 @@
 # careers section data
 - name:
-    detail: Nextcode
-    i18n: nextcode
+    detail: Integrated Software Services Limited
+    i18n: issl
   desc:
-    detail: Now I am in Nextcode and develop website with Python code for genetic analysis.
+    detail: Now I am in ISSLNG, where I develop mobile and web applications for clients.
     i18n: nextcode_des
   date:
-    detail: Apr. 2016
-    i18n: nextcode_date
+    detail: July 2015
+    i18n: issl_date
   job:
-    detail: Python Developer
-    i18n: nextcode_job
+    detail: Technical Officer
+    i18n: issl_job
   icon: fa-plus-square
 
 - name:
-    detail: Netease Game
-    i18n: netease
+    detail: National Youth Service Corps
+    i18n: nysc
   desc:
-    detail: In Netease game, I learned game service system and use Python code for ops.
-    i18n: netease_des
+    detail: I served my country as a lecturer's assistant in Akwa Ibom State University administring tests, giving tutorials and helping out as often as needed. As a corper, we conducted computer appreciation classes for students in our community.
+    i18n: nysc_des
   date:
-    detail: Jun. 2015
-    i18n: nextcode_date
+    detail: Sept. 2014
+    i18n: nysc_date
   job:
-    detail: Dev Ops
+    detail: Lecturer's Assistant
     i18n: netease_job
   icon: fa-gamepad
 
 - name:
-    detail: Ucloud
-    i18n: ucloud
+    detail: Telenoetica
+    i18n: telenoetica
   desc:
-    detail: In ucloud, I started to deal with servers and Linux system and use shell scripts to manage massive server.
-    i18n: ucloud_des
+    detail: Here, I engaged in drive tests and developed algorithms for conducting drive tests on Airtel Networks.
+    i18n: telenoetica_des
   date:
-    detail: Sep. 2013
-    i18n: ucloud_date
+    detail: March. 2014
+    i18n: telenoetica_date
   job:
-    detail: Dev Ops
-    i18n: ucloud_job
+    detail: Graduate Trainee Engineer
+    i18n: telenoetica_job
   icon: fa-cloud
 
 - name:
     detail: Graduation
     i18n: college
   desc:
-    detail: At July 2013,I graduated from college and started my IT technology tour.
+    detail: At Feb. 2014, I graduated from University of Lagos, with a first class in Electrical/Electronics Engineering. And this is where my software adventure began!
     i18n: college_des
   date:
-    detail: Jul. 2013
+    detail: Feb. 2014
     i18n: college_date
   job:
     detail: Student
     i18n: college_job
   icon: fa-book
+  
+- name:
+    detail: IQube Labs
+    i18n: iqube
+  desc:
+    detail: My first software development job. As a student trainee, I did alot of learning as an intern and developed web applications on the Java EE platform.
+    i18n: iqube_des
+  date:
+    detail: Feb. 2013
+    i18n: telenoetica_date
+  job:
+    detail: Graduate Trainee Engineer
+    i18n: telenoetica_job
+  icon: fa-cloud

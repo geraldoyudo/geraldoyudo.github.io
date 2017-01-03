@@ -1,15 +1,15 @@
 # skills section data
-- name: Python
+- name: Java
   percentage: 85
 
 - name: HTML/CSS
   percentage: 65
 
-- name: Linux/Shell
-  percentage: 75
+- name: Spring
+  percentage: 80
 
-- name: jQuery
-  percentage: 85
+- name: NodeJS
+  percentage: 70
 
 - name: AngularJS
   percentage: 80
@@ -17,5 +17,5 @@
 - name: Ionic
   percentage: 70
 
-- name: Vuejs
-  percentage: 65
+- name: Python
+  percentage: 50
