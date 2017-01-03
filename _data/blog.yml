@@ -2,23 +2,23 @@
 - name: Blog
   href: '/blog/'
 
-- name: Python
-  href: '/python/'
+- name: Java
+  href: '/java/'
 
-- name: Linux
-  href: '/linux/'
+- name: Javascript
+  href: '/javascript/'
 
 - name: HTML
   href: '/html/'
+  
+- name: Others
+  href: '/others/'
 
-- name: Database
-  href: '/database/'
+- name: Software Development
+  href: '/development/'
 
-- name: Mac
-  href: '/mac/'
+- name: Science
+  href: '/science/'
 
 - name: Life
   href: '/life/'
-
-- name: Donate
-  href: '/donate/'
