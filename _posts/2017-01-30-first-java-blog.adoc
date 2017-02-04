@@ -1,0 +1,270 @@
+---
+layout: post
+title:  "In Preparation For Java 9"
+desc: "About software development"
+keywords: "jekyll,blog,first"
+date: 2017-01-30
+categories: [Java]
+tags: [blog]
+icon: fa-bookmark-o
+---
+
+Many of us are devoted lovers of the Java Programming language;  
+some of us use Java out of necessity, while others use it because it is fun 
+and neat to code with. Regardless of your reason to program with Java, there 
+is a 90 percent probability (well I just made that up) that you are monitoring 
+the status of development of Java 9.
+
+Java One ( as it is popularly coined) has the potential to be of the most exciting 
+iterations of the programming language. It brings to the playing field a lot of 
+improvements that make coding in java easier and more organized. Among these features 
+notably is the Project Jigsaw, the Java Platform's new module system. 
+This enables us to modularize our java application and only import libraries 
+that we need (just like the ever exciting spring framework). 
+With this major introduction to the framework, most codes have to be refactored 
+in order to utilize this functionality. 
+
+In addition the new module introduction, features like private interface methods, 
+diamond operator for anonymous classes, stack walking, redirected platform logging 
+and support for reactive streams have been introduced. To learn about these new 
+features, check the blog: https://www.sitepoint.com/ultimate-guide-to-java-9/[The Ultimate Guide to Java 9 by Nicolai Parlog].
+
+Long story short, Java is about to get a lot more exciting 
+- just like spring! But in order to harness these exciting features, we need to 
+know some cool features that already exist from Java 7 and Java 8. According to 
+a https://plumbr.eu/blog/java/java-version-and-vendor-data-analyzed-2016-edition
+[Java vendor analysis by  Nikita Salnikov-Tarnovski], it shows that Java 8 and 7 
+adoption is little over 45 percent world-wide with Java 6 trailing at the bottom 
+with little over 10 percent. This simply means that some developers do not see 
+the need to upgrade. In this post, I will be discussing some of the exciting 
+and beneficial features that have been introduced since Java 7. 
+
+TIP: Code examples in the following paragraphs can be found in 
+https://github.com/geraldoyudo/in-preparation-for-java-9[my github account].
+
+
+== Secrets of the Java 7
+As I was (and still am) daydreaming about getting my hands dirty with the 
+java 9, I found a lot of cool features already existent in java 7. 
+
+
+=== Underscores in Numeric Literals
+
+Who hasn’t grown tired of counting the zeros and digits whenever we declare
+a really large numeric value? I know I have, and coming across this feature
+made me think to myself "where have you been all my life?". It turns out that, 
+just as in writing where we separate digits with commas, you can separate digits 
+of your numeric literals with underscores. Nifty huh? Now numeric literals 
+can be much more readable. Look at the sample below: 
+
+
+[[UnderscoresNumericLiterals.java]]
+[source, java]
+----
+public class UnderscoresNumericLiterals {
+    
+    public static void main(String[] args){
+        long aReallyLargeNumber = 1_234_553_000_000L;
+        System.out.println(aReallyLargeNumber);
+        
+    }
+}
+----
+
+
+The resulting output is the same when the underscores are removed. 
+The difference is that your code becomes much more easier to read. 
+
+
+=== Binary Literals
+
+Some applications require modelling data in binary form. 
+Extra conversion steps have to be carried out in order to store the data 
+models in primitive form. But since the release of java 7, 
+you can directly save a numeric literal in binary form. Look at the snippet below:
+
+[[BinaryLiterals.java]]
+[source, java]
+----
+public class BinaryLiterals {
+    public static void main(String[] args){
+        int firstDigit = 0b101;
+        int secondDigit = 0xaf;
+        System.out.println(String.format("0b101 = %d\n0xaf = %d", firstDigit, secondDigit));
+      
+    }
+}
+----
+
+
+The console output becomes: 
+
+----
+0b101 = 5
+0xaf = 175
+----
+
+Pretty cool right? 
+
+
+=== Strings in Switching Statements!!!
+
+Oh boy, when I heard I could do this, I was like - "java, you took a weight off
+my shoulders". Do you know how annoying it was to write an if else ladder 
+for a case of 5 string values? 
+
+Compare the following, first with the if-else ladder and second with the 
+string switch statement:
+
+
+[[StringSwitchStatements.java]]
+[source, java]
+----
+    ... 
+
+    if(args[0].equals("value1")){
+        // do something with value 1
+    }else if(args[0].equals("value2")){
+        // do something with value 2
+    }
+    else if(args[0].equals("value3")){
+        // do something with value 3
+    }
+    else if(args[0].equals("value4")){
+        // do something with value 4
+    }
+    else if(args[0].equals("value5")){
+        // do some thing with value 5
+    }
+    else{
+        // do some default stuff
+    }
+    ...
+
+----
+
+
+[[StringSwitchStatements.java]]
+[source, java]
+----
+    ... 
+    switch(args[0]){
+        case "value1":{
+            // do something with value 1
+            break;
+        }
+        case "value2":{
+                // do something with value 1
+            break;
+        }
+        case "value3":{
+                // do something with value 1
+            break;
+        }
+        case "value4":{
+                // do something with value 1
+            break;
+        }
+        case "value5":{
+                // do something with value 1
+            break;
+        }
+        default:{
+                // do something with default value
+            break;
+        }
+        
+    }
+    
+    ...
+    
+----
+
+
+It is evident that the code becomes easier to read, we do not have to invoke 
+the equals method unnecessarily and the block of code becomes neater. Pheew! It is 
+advisable to stick with the switch statements. Most IDE's will tell you to do so.
+
+
+== Type Inference for Generic Instance Creation
+
+In java, a lot of things get us really bogged down, 
+all in the name of preserving the object type. One of these monotonous routines 
+we do all the time is declaring a generic type - for example a String array list
+
+
+[[GenericTypeInference.java]]
+[source, java]
+----
+ ArrayList<String> myStringList = new ArrayList<String>();
+----
+
+The annoying question we ask ourselves all the time is: 
+
+
+""
+Why the heck do we need to specify generic arguments twice?
+""
+
+We may not understand how annoying this is unless we try something a little bit 
+more complicated: 
+
+
+----
+Map<String,List<String>> complexMap = 
+new HashMap<String,List<String>>();
+----
+
+
+Just imagine, I had to fold my code because I declared a variable - just one 
+variable! I swear I must have heard progamming beginners curse java because 
+it forced them to type too much. Fortunately, with java 7, the compiler has 
+become intelligent enough to know the kind of variable you are creating by
+only specifying the first argument type.  A diamond operator is enough for 
+the java compiler to make an accurate type inference on the object you are trying 
+to create. 
+
+
+=== Try-with-resources
+
+A try with resources statement is a statement inside a try block that 
+declares one or more resources. A resource is an object that must be closed after 
+a program is done with it. In the advent of java 7, resources had to be closed 
+explicitly in the finally block. A code for handling a simple file read is shown 
+below: 
+
+----
+Try with resources code
+----
+
+
+The try-with-resources statements tell the compiler to automatically 
+close the resource when the block of code has finished executing. No finally block 
+is needed again and our code becomes less verbose. See the previous below refactored 
+with try-with-resources. Neat huh? 
+
+----
+Factored Try with resources code
+----
+
+
+=== Improved Type Caching for Rethrowing Exceptions from Multiple Catch Blocks
+
+In order to fully understand this feature, let us analyze the code below: 
+
+
+----
+catch code
+---- 
+
+In this case, we want to process both fuel and brake exceptions 
+the same way and throw them. Before Java 7, if this exception is thrown, 
+there is no way for the rethrowException method to indicate that these 
+"Exception"s are either fuel or brake. The type is lost in the compiling world. 
+However, from Java 7, the java compiler can intuitively deduce that the exception 
+object can be either a Fuel or a Brake exception by analyzing your catch clauses. 
+The code can now be written as: 
+
+----
+Improved catch code
+----
