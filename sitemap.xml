@@ -1,17 +1,89 @@
----
-layout: null
-title : Sitemap
----
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-{% for post in site.posts %}
+
     <url>
-        <loc>{{site.url}}{{ post.url }}</loc>
+        <loc>/science/2017/01/03/first-science-blog.html</loc>
     </url>
-{% endfor %}
-{% for page in site.pages %}
+
     <url>
-        <loc>{{site.url}}{{ page.url }}</loc>
+        <loc>/others/2017/01/03/first-others-blog.html</loc>
     </url>
-{% endfor %}
+
+    <url>
+        <loc>/development/2017/01/03/first-life-blog.html</loc>
+    </url>
+
+    <url>
+        <loc>/javascript/2017/01/03/first-javascript-blog.html</loc>
+    </url>
+
+    <url>
+        <loc>/java/2017/01/03/first-java-blog.html</loc>
+    </url>
+
+    <url>
+        <loc>/html/2017/01/03/first-html-blog.html</loc>
+    </url>
+
+    <url>
+        <loc>/development/2017/01/03/first-development-blog.html</loc>
+    </url>
+
+
+    <url>
+        <loc>/404.html</loc>
+    </url>
+
+    <url>
+        <loc>/blog/</loc>
+    </url>
+
+    <url>
+        <loc>/search/cb-search.json</loc>
+    </url>
+
+    <url>
+        <loc>/development/</loc>
+    </url>
+
+    <url>
+        <loc>/feed.xml</loc>
+    </url>
+
+    <url>
+        <loc>/html/</loc>
+    </url>
+
+    <url>
+        <loc>/</loc>
+    </url>
+
+    <url>
+        <loc>/java/</loc>
+    </url>
+
+    <url>
+        <loc>/javascript/</loc>
+    </url>
+
+    <url>
+        <loc>/life/</loc>
+    </url>
+
+    <url>
+        <loc>/others/</loc>
+    </url>
+
+    <url>
+        <loc>/robots.txt</loc>
+    </url>
+
+    <url>
+        <loc>/science/</loc>
+    </url>
+
+    <url>
+        <loc>/sitemap.xml</loc>
+    </url>
+
 </urlset>

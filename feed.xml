@@ -1,30 +1,154 @@
----
-layout: null
----
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>{{ site.title | xml_escape }}</title>
-    <description>{{ site.description | xml_escape }}</description>
-    <link>{{ site.url }}{{ site.baseurl }}/</link>
-    <atom:link href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml"/>
-    <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
-    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
-    <generator>Jekyll v{{ jekyll.version }}</generator>
-    {% for post in site.posts %}
+    <title>Prime Devs</title>
+    <description>Gerald&#39;s Blog</description>
+    <link>//</link>
+    <atom:link href="//feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 21 Feb 2017 21:07:55 +0000</pubDate>
+    <lastBuildDate>Tue, 21 Feb 2017 21:07:55 +0000</lastBuildDate>
+    <generator>Jekyll v3.1.6</generator>
+    
       <item>
-        <title>{{ post.title | xml_escape }}</title>
-        <description>{{ post.content | xml_escape }}</description>
-        <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-        <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
-        <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
-        {% for tag in post.tags %}
-        <category>{{ tag | xml_escape }}</category>
-        {% endfor %}
-        {% for cat in post.categories %}
-        <category>{{ cat | xml_escape }}</category>
-        {% endfor %}
+        <title>Testing Science</title>
+        <description>&lt;p&gt;Hello World&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Test data
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Science&lt;/p&gt;
+</description>
+        <pubDate>Tue, 03 Jan 2017 00:00:00 +0000</pubDate>
+        <link>//science/2017/01/03/first-science-blog.html</link>
+        <guid isPermaLink="true">//science/2017/01/03/first-science-blog.html</guid>
+        
+        <category>blog</category>
+        
+        
+        <category>Science</category>
+        
       </item>
-    {% endfor %}
+    
+      <item>
+        <title>Testing Others</title>
+        <description>&lt;p&gt;Hello World&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Test data
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Others&lt;/p&gt;
+</description>
+        <pubDate>Tue, 03 Jan 2017 00:00:00 +0000</pubDate>
+        <link>//others/2017/01/03/first-others-blog.html</link>
+        <guid isPermaLink="true">//others/2017/01/03/first-others-blog.html</guid>
+        
+        <category>blog</category>
+        
+        
+        <category>Others</category>
+        
+      </item>
+    
+      <item>
+        <title>Testing Life</title>
+        <description>&lt;p&gt;Hello World&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Test data
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Life&lt;/p&gt;
+</description>
+        <pubDate>Tue, 03 Jan 2017 00:00:00 +0000</pubDate>
+        <link>//development/2017/01/03/first-life-blog.html</link>
+        <guid isPermaLink="true">//development/2017/01/03/first-life-blog.html</guid>
+        
+        <category>blog</category>
+        
+        
+        <category>Development</category>
+        
+      </item>
+    
+      <item>
+        <title>Testing Javascript</title>
+        <description>&lt;p&gt;Hello World&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Test data
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Javascript&lt;/p&gt;
+</description>
+        <pubDate>Tue, 03 Jan 2017 00:00:00 +0000</pubDate>
+        <link>//javascript/2017/01/03/first-javascript-blog.html</link>
+        <guid isPermaLink="true">//javascript/2017/01/03/first-javascript-blog.html</guid>
+        
+        <category>blog</category>
+        
+        
+        <category>Javascript</category>
+        
+      </item>
+    
+      <item>
+        <title>Testing Java</title>
+        <description>&lt;p&gt;Hello World&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Test data
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Java&lt;/p&gt;
+</description>
+        <pubDate>Tue, 03 Jan 2017 00:00:00 +0000</pubDate>
+        <link>//java/2017/01/03/first-java-blog.html</link>
+        <guid isPermaLink="true">//java/2017/01/03/first-java-blog.html</guid>
+        
+        <category>blog</category>
+        
+        
+        <category>Java</category>
+        
+      </item>
+    
+      <item>
+        <title>Testing Html</title>
+        <description>&lt;p&gt;Hello World&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Test Html
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Sample&lt;/p&gt;
+</description>
+        <pubDate>Tue, 03 Jan 2017 00:00:00 +0000</pubDate>
+        <link>//html/2017/01/03/first-html-blog.html</link>
+        <guid isPermaLink="true">//html/2017/01/03/first-html-blog.html</guid>
+        
+        <category>blog</category>
+        
+        
+        <category>HTML</category>
+        
+      </item>
+    
+      <item>
+        <title>Testing Development</title>
+        <description>&lt;p&gt;Hello World&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Test data
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Sample&lt;/p&gt;
+</description>
+        <pubDate>Tue, 03 Jan 2017 00:00:00 +0000</pubDate>
+        <link>//development/2017/01/03/first-development-blog.html</link>
+        <guid isPermaLink="true">//development/2017/01/03/first-development-blog.html</guid>
+        
+        <category>blog</category>
+        
+        
+        <category>Development</category>
+        
+      </item>
+    
   </channel>
 </rss>
