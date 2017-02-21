@@ -5,8 +5,8 @@
     <description>Gerald&#39;s Blog</description>
     <link>//</link>
     <atom:link href="//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 21 Feb 2017 21:07:55 +0000</pubDate>
-    <lastBuildDate>Tue, 21 Feb 2017 21:07:55 +0000</lastBuildDate>
+    <pubDate>Tue, 21 Feb 2017 21:11:38 +0000</pubDate>
+    <lastBuildDate>Tue, 21 Feb 2017 21:11:38 +0000</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
@@ -91,14 +91,17 @@
     
       <item>
         <title>Testing Java</title>
-        <description>&lt;p&gt;Hello World&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Test data
-&lt;/code&gt;&lt;/pre&gt;
+        <description>&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Hello World&lt;/p&gt;
 &lt;/div&gt;
-
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;CodeRay highlight&quot;&gt;&lt;code&gt;Test data&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
 &lt;p&gt;Java&lt;/p&gt;
-</description>
+&lt;/div&gt;</description>
         <pubDate>Tue, 03 Jan 2017 00:00:00 +0000</pubDate>
         <link>//java/2017/01/03/first-java-blog.html</link>
         <guid isPermaLink="true">//java/2017/01/03/first-java-blog.html</guid>
