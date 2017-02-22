@@ -1,17 +1,12 @@
----
-layout: null
----
 {
 	"code" : 0 ,
 	"data" : [
-	 {% for post in site.posts %}
+	 
 	{
-		"title" : "{{ post.title }} - {{ post.date | date_to_utc | date: '%Y-%m-%d'}}",
-		"url" : "{{ post.url }}"
+		"title" : "First Post!!! In Preparation For Java 9 - 2017-01-30",
+		"url" : "/java/2017/01/30/first-java-blog.html"
 	}
-	{% if forloop.rindex != 1  %}
-	,
-	{% endif %}
-    {% endfor %}
+	
+    
 	]
 }

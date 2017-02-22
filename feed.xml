@@ -1,30 +1,401 @@
----
-layout: null
----
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>{{ site.title | xml_escape }}</title>
-    <description>{{ site.description | xml_escape }}</description>
-    <link>{{ site.url }}{{ site.baseurl }}/</link>
-    <atom:link href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml"/>
-    <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
-    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
-    <generator>Jekyll v{{ jekyll.version }}</generator>
-    {% for post in site.posts %}
+    <title>Prime Devs</title>
+    <description>Gerald&#39;s Blog</description>
+    <link>//</link>
+    <atom:link href="//feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Wed, 22 Feb 2017 09:20:20 +0000</pubDate>
+    <lastBuildDate>Wed, 22 Feb 2017 09:20:20 +0000</lastBuildDate>
+    <generator>Jekyll v3.1.6</generator>
+    
       <item>
-        <title>{{ post.title | xml_escape }}</title>
-        <description>{{ post.content | xml_escape }}</description>
-        <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-        <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
-        <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
-        {% for tag in post.tags %}
-        <category>{{ tag | xml_escape }}</category>
-        {% endfor %}
-        {% for cat in post.categories %}
-        <category>{{ cat | xml_escape }}</category>
-        {% endfor %}
+        <title>First Post!!! In Preparation For Java 9</title>
+        <description>&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Many of us are devoted lovers of the Java Programming language;
+some of us use Java out of necessity, while others use it because it is fun
+and neat to code with. Regardless of your reason to program with Java, there
+is a 90 percent probability (well I just made that up) that you are monitoring
+the status of development of Java 9.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Java One ( as it is popularly coined) has the potential to be of the most exciting
+iterations of the programming language. It brings to the playing field a lot of
+improvements that make coding in java easier and more organized. Among these features
+notably is the Project Jigsaw, the Java Platform&amp;#8217;s new module system.
+This enables us to modularize our java application and only import libraries
+that we need (just like the ever exciting spring framework).
+With this major introduction to the framework, most codes have to be refactored
+in order to utilize this functionality.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;In addition the new module introduction, features like private interface methods,
+diamond operator for anonymous classes, stack walking, redirected platform logging
+and support for reactive streams have been introduced. To learn about these new
+features, check the blog: &lt;a href=&quot;https://www.sitepoint.com/ultimate-guide-to-java-9/&quot;&gt;The Ultimate Guide to Java 9 by Nicolai Parlog&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Long story short, Java is about to get a lot more exciting
+- just like spring! But in order to harness these exciting features, we need to
+know some cool features that already exist from Java 7 and Java 8. According to
+a &lt;a href=&quot;https://plumbr.eu/blog/java/java-version-and-vendor-data-analyzed-2016-edition&quot; class=&quot;bare&quot;&gt;https://plumbr.eu/blog/java/java-version-and-vendor-data-analyzed-2016-edition&lt;/a&gt;
+[Java vendor analysis by  Nikita Salnikov-Tarnovski], it shows that Java 8 and 7
+adoption is little over 45 percent world-wide with Java 6 trailing at the bottom
+with little over 10 percent. This simply means that some developers do not see
+the need to upgrade. In this post, I will be discussing some of the exciting
+and beneficial features that have been introduced since Java 7.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;admonitionblock tip&quot;&gt;
+&lt;table&gt;
+&lt;tr&gt;
+&lt;td class=&quot;icon&quot;&gt;
+&lt;i class=&quot;fa icon-tip&quot; title=&quot;Tip&quot;&gt;&lt;/i&gt;
+&lt;/td&gt;
+&lt;td class=&quot;content&quot;&gt;
+Code examples in the following paragraphs can be found in
+&lt;a href=&quot;https://github.com/geraldoyudo/in-preparation-for-java-9&quot;&gt;my github account&lt;/a&gt;.
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;secrets_of_the_java_7&quot;&gt;Secrets of the Java 7&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;As I was (and still am) daydreaming about getting my hands dirty with the
+java 9, I found a lot of cool features already existent in java 7.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;underscores_in_numeric_literals&quot;&gt;Underscores in Numeric Literals&lt;/h3&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Who hasn’t grown tired of counting the zeros and digits whenever we declare
+a really large numeric value? I know I have, and coming across this feature
+made me think to myself &quot;where have you been all my life?&quot;. It turns out that,
+just as in writing where we separate digits with commas, you can separate digits
+of your numeric literals with underscores. Nifty huh? Now numeric literals
+can be much more readable. Look at the sample below:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&quot;UnderscoresNumericLiterals.java&quot; class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;pygments highlight&quot;&gt;&lt;code data-lang=&quot;java&quot;&gt;&lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;public&lt;/span&gt; &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;class&lt;/span&gt; &lt;span style=&quot;color: #0000FF; font-weight: bold&quot;&gt;UnderscoresNumericLiterals&lt;/span&gt; &lt;span style=&quot;color: #666666&quot;&gt;{&lt;/span&gt;
+
+    &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;public&lt;/span&gt; &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;static&lt;/span&gt; &lt;span style=&quot;color: #B00040&quot;&gt;void&lt;/span&gt; &lt;span style=&quot;color: #0000FF&quot;&gt;main&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;(&lt;/span&gt;String&lt;span style=&quot;color: #666666&quot;&gt;[]&lt;/span&gt; args&lt;span style=&quot;color: #666666&quot;&gt;){&lt;/span&gt;
+        &lt;span style=&quot;color: #B00040&quot;&gt;long&lt;/span&gt; aReallyLargeNumber &lt;span style=&quot;color: #666666&quot;&gt;=&lt;/span&gt; &lt;span style=&quot;color: #666666&quot;&gt;1_234_553_000_000L;&lt;/span&gt;
+        System&lt;span style=&quot;color: #666666&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #7D9029&quot;&gt;out&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #7D9029&quot;&gt;println&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;(&lt;/span&gt;aReallyLargeNumber&lt;span style=&quot;color: #666666&quot;&gt;);&lt;/span&gt;
+
+    &lt;span style=&quot;color: #666666&quot;&gt;}&lt;/span&gt;
+&lt;span style=&quot;color: #666666&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;The resulting output is the same when the underscores are removed.
+The difference is that your code becomes much more easier to read.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;binary_literals&quot;&gt;Binary Literals&lt;/h3&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Some applications require modelling data in binary form.
+Extra conversion steps have to be carried out in order to store the data
+models in primitive form. But since the release of java 7,
+you can directly save a numeric literal in binary form. Look at the snippet below:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&quot;BinaryLiterals.java&quot; class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;pygments highlight&quot;&gt;&lt;code data-lang=&quot;java&quot;&gt;&lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;public&lt;/span&gt; &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;class&lt;/span&gt; &lt;span style=&quot;color: #0000FF; font-weight: bold&quot;&gt;BinaryLiterals&lt;/span&gt; &lt;span style=&quot;color: #666666&quot;&gt;{&lt;/span&gt;
+    &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;public&lt;/span&gt; &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;static&lt;/span&gt; &lt;span style=&quot;color: #B00040&quot;&gt;void&lt;/span&gt; &lt;span style=&quot;color: #0000FF&quot;&gt;main&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;(&lt;/span&gt;String&lt;span style=&quot;color: #666666&quot;&gt;[]&lt;/span&gt; args&lt;span style=&quot;color: #666666&quot;&gt;){&lt;/span&gt;
+        &lt;span style=&quot;color: #B00040&quot;&gt;int&lt;/span&gt; firstDigit &lt;span style=&quot;color: #666666&quot;&gt;=&lt;/span&gt; &lt;span style=&quot;color: #666666&quot;&gt;0b101;&lt;/span&gt;
+        &lt;span style=&quot;color: #B00040&quot;&gt;int&lt;/span&gt; secondDigit &lt;span style=&quot;color: #666666&quot;&gt;=&lt;/span&gt; &lt;span style=&quot;color: #666666&quot;&gt;0xaf;&lt;/span&gt;
+        System&lt;span style=&quot;color: #666666&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #7D9029&quot;&gt;out&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #7D9029&quot;&gt;println&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;(&lt;/span&gt;String&lt;span style=&quot;color: #666666&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #7D9029&quot;&gt;format&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #BA2121&quot;&gt;&amp;quot;0b101 = %d\n0xaf = %d&amp;quot;&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;,&lt;/span&gt; firstDigit&lt;span style=&quot;color: #666666&quot;&gt;,&lt;/span&gt; secondDigit&lt;span style=&quot;color: #666666&quot;&gt;));&lt;/span&gt;
+
+    &lt;span style=&quot;color: #666666&quot;&gt;}&lt;/span&gt;
+&lt;span style=&quot;color: #666666&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;The console output becomes:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre&gt;0b101 = 5
+0xaf = 175&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Pretty cool right?&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;strings_in_switching_statements&quot;&gt;Strings in Switching Statements!!!&lt;/h3&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Oh boy, when I heard I could do this, I was like - &quot;java, you took a weight off
+my shoulders&quot;. Do you know how annoying it was to write an if else ladder
+for a case of 5 string values?&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Compare the following, first with the if-else ladder and second with the
+string switch statement:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&quot;StringSwitchStatements.java&quot; class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;pygments highlight&quot;&gt;&lt;code data-lang=&quot;java&quot;&gt;    &lt;span style=&quot;color: #666666&quot;&gt;...&lt;/span&gt;
+
+    &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;if&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;(&lt;/span&gt;args&lt;span style=&quot;color: #666666&quot;&gt;[0].&lt;/span&gt;&lt;span style=&quot;color: #7D9029&quot;&gt;equals&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #BA2121&quot;&gt;&amp;quot;value1&amp;quot;&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;)){&lt;/span&gt;
+        &lt;span style=&quot;color: #408080; font-style: italic&quot;&gt;// do something with value 1&lt;/span&gt;
+    &lt;span style=&quot;color: #666666&quot;&gt;}&lt;/span&gt;&lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;else&lt;/span&gt; &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;if&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;(&lt;/span&gt;args&lt;span style=&quot;color: #666666&quot;&gt;[0].&lt;/span&gt;&lt;span style=&quot;color: #7D9029&quot;&gt;equals&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #BA2121&quot;&gt;&amp;quot;value2&amp;quot;&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;)){&lt;/span&gt;
+        &lt;span style=&quot;color: #408080; font-style: italic&quot;&gt;// do something with value 2&lt;/span&gt;
+    &lt;span style=&quot;color: #666666&quot;&gt;}&lt;/span&gt;
+    &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;else&lt;/span&gt; &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;if&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;(&lt;/span&gt;args&lt;span style=&quot;color: #666666&quot;&gt;[0].&lt;/span&gt;&lt;span style=&quot;color: #7D9029&quot;&gt;equals&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #BA2121&quot;&gt;&amp;quot;value3&amp;quot;&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;)){&lt;/span&gt;
+        &lt;span style=&quot;color: #408080; font-style: italic&quot;&gt;// do something with value 3&lt;/span&gt;
+    &lt;span style=&quot;color: #666666&quot;&gt;}&lt;/span&gt;
+    &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;else&lt;/span&gt; &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;if&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;(&lt;/span&gt;args&lt;span style=&quot;color: #666666&quot;&gt;[0].&lt;/span&gt;&lt;span style=&quot;color: #7D9029&quot;&gt;equals&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #BA2121&quot;&gt;&amp;quot;value4&amp;quot;&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;)){&lt;/span&gt;
+        &lt;span style=&quot;color: #408080; font-style: italic&quot;&gt;// do something with value 4&lt;/span&gt;
+    &lt;span style=&quot;color: #666666&quot;&gt;}&lt;/span&gt;
+    &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;else&lt;/span&gt; &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;if&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;(&lt;/span&gt;args&lt;span style=&quot;color: #666666&quot;&gt;[0].&lt;/span&gt;&lt;span style=&quot;color: #7D9029&quot;&gt;equals&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #BA2121&quot;&gt;&amp;quot;value5&amp;quot;&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;)){&lt;/span&gt;
+        &lt;span style=&quot;color: #408080; font-style: italic&quot;&gt;// do some thing with value 5&lt;/span&gt;
+    &lt;span style=&quot;color: #666666&quot;&gt;}&lt;/span&gt;
+    &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;else&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;{&lt;/span&gt;
+        &lt;span style=&quot;color: #408080; font-style: italic&quot;&gt;// do some default stuff&lt;/span&gt;
+    &lt;span style=&quot;color: #666666&quot;&gt;}&lt;/span&gt;
+    &lt;span style=&quot;color: #666666&quot;&gt;...&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;StringSwitchStatements.java&quot; class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;pygments highlight&quot;&gt;&lt;code data-lang=&quot;java&quot;&gt;    &lt;span style=&quot;color: #666666&quot;&gt;...&lt;/span&gt;
+    &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;switch&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;(&lt;/span&gt;args&lt;span style=&quot;color: #666666&quot;&gt;[0]){&lt;/span&gt;
+        &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;case&lt;/span&gt; &lt;span style=&quot;color: #BA2121&quot;&gt;&amp;quot;value1&amp;quot;&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;:{&lt;/span&gt;
+            &lt;span style=&quot;color: #408080; font-style: italic&quot;&gt;// do something with value 1&lt;/span&gt;
+            &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;break&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;;&lt;/span&gt;
+        &lt;span style=&quot;color: #666666&quot;&gt;}&lt;/span&gt;
+        &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;case&lt;/span&gt; &lt;span style=&quot;color: #BA2121&quot;&gt;&amp;quot;value2&amp;quot;&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;:{&lt;/span&gt;
+                &lt;span style=&quot;color: #408080; font-style: italic&quot;&gt;// do something with value 1&lt;/span&gt;
+            &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;break&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;;&lt;/span&gt;
+        &lt;span style=&quot;color: #666666&quot;&gt;}&lt;/span&gt;
+        &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;case&lt;/span&gt; &lt;span style=&quot;color: #BA2121&quot;&gt;&amp;quot;value3&amp;quot;&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;:{&lt;/span&gt;
+                &lt;span style=&quot;color: #408080; font-style: italic&quot;&gt;// do something with value 1&lt;/span&gt;
+            &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;break&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;;&lt;/span&gt;
+        &lt;span style=&quot;color: #666666&quot;&gt;}&lt;/span&gt;
+        &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;case&lt;/span&gt; &lt;span style=&quot;color: #BA2121&quot;&gt;&amp;quot;value4&amp;quot;&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;:{&lt;/span&gt;
+                &lt;span style=&quot;color: #408080; font-style: italic&quot;&gt;// do something with value 1&lt;/span&gt;
+            &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;break&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;;&lt;/span&gt;
+        &lt;span style=&quot;color: #666666&quot;&gt;}&lt;/span&gt;
+        &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;case&lt;/span&gt; &lt;span style=&quot;color: #BA2121&quot;&gt;&amp;quot;value5&amp;quot;&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;:{&lt;/span&gt;
+                &lt;span style=&quot;color: #408080; font-style: italic&quot;&gt;// do something with value 1&lt;/span&gt;
+            &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;break&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;;&lt;/span&gt;
+        &lt;span style=&quot;color: #666666&quot;&gt;}&lt;/span&gt;
+        &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;default&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;:{&lt;/span&gt;
+                &lt;span style=&quot;color: #408080; font-style: italic&quot;&gt;// do something with default value&lt;/span&gt;
+            &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;break&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;;&lt;/span&gt;
+        &lt;span style=&quot;color: #666666&quot;&gt;}&lt;/span&gt;
+
+    &lt;span style=&quot;color: #666666&quot;&gt;}&lt;/span&gt;
+
+    &lt;span style=&quot;color: #666666&quot;&gt;...&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;It is evident that the code becomes easier to read, we do not have to invoke
+the equals method unnecessarily and the block of code becomes neater. Pheew! It is
+advisable to stick with the switch statements. Most IDE&amp;#8217;s will tell you to do so.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;type_inference_for_generic_instance_creation&quot;&gt;Type Inference for Generic Instance Creation&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;In java, a lot of things get us really bogged down,
+all in the name of preserving the object type. One of these monotonous routines
+we do all the time is declaring a generic type - for example a String array list&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&quot;GenericTypeInference.java&quot; class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;pygments highlight&quot;&gt;&lt;code data-lang=&quot;java&quot;&gt; ArrayList&lt;span style=&quot;color: #666666&quot;&gt;&amp;lt;&lt;/span&gt;String&lt;span style=&quot;color: #666666&quot;&gt;&amp;gt;&lt;/span&gt; myStringList &lt;span style=&quot;color: #666666&quot;&gt;=&lt;/span&gt; &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;new&lt;/span&gt; ArrayList&lt;span style=&quot;color: #666666&quot;&gt;&amp;lt;&lt;/span&gt;String&lt;span style=&quot;color: #666666&quot;&gt;&amp;gt;();&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;The annoying question we ask ourselves all the time is:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;quoteblock&quot;&gt;
+&lt;blockquote&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Why the heck do we need to specify generic arguments twice?&lt;/p&gt;
+&lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;We may not understand how annoying this is unless we try something a little bit
+more complicated:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre&gt;Map&amp;lt;String,List&amp;lt;String&amp;gt;&amp;gt; complexMap =
+new HashMap&amp;lt;String,List&amp;lt;String&amp;gt;&amp;gt;();&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Just imagine, I had to fold my code because I declared a variable - just one
+variable! I swear I must have heard progamming beginners curse java because
+it forced them to type too much. Fortunately, with java 7, the compiler has
+become intelligent enough to know the kind of variable you are creating by
+only specifying the first argument type.  A diamond operator is enough for
+the java compiler to make an accurate type inference on the object you are trying
+to create.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;try_with_resources&quot;&gt;Try-with-resources&lt;/h3&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;A try with resources statement is a statement inside a try block that
+declares one or more resources. A resource is an object that must be closed after
+a program is done with it. Prior java 7, resources had to be closed
+explicitly in the finally block. A code for handling a simple file read is shown
+below:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&quot;TryWithResources.java&quot; class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;pygments highlight&quot;&gt;&lt;code data-lang=&quot;java&quot;&gt;&lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;public&lt;/span&gt; &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;class&lt;/span&gt; &lt;span style=&quot;color: #0000FF; font-weight: bold&quot;&gt;TryWithResources&lt;/span&gt; &lt;span style=&quot;color: #666666&quot;&gt;{&lt;/span&gt;
+    &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;public&lt;/span&gt; &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;static&lt;/span&gt; &lt;span style=&quot;color: #B00040&quot;&gt;void&lt;/span&gt; &lt;span style=&quot;color: #0000FF&quot;&gt;main&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;(&lt;/span&gt;String&lt;span style=&quot;color: #666666&quot;&gt;[]&lt;/span&gt; args&lt;span style=&quot;color: #666666&quot;&gt;){&lt;/span&gt;
+        InputStream inputStream &lt;span style=&quot;color: #666666&quot;&gt;=&lt;/span&gt; &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;null&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;;&lt;/span&gt;
+        &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;try&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;{&lt;/span&gt;
+            inputStream &lt;span style=&quot;color: #666666&quot;&gt;=&lt;/span&gt; &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;new&lt;/span&gt; FileInputStream&lt;span style=&quot;color: #666666&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #BA2121&quot;&gt;&amp;quot;myFile.txt&amp;quot;&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;);&lt;/span&gt;
+
+        &lt;span style=&quot;color: #666666&quot;&gt;}&lt;/span&gt;&lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;catch&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;(&lt;/span&gt;FileNotFoundException ex&lt;span style=&quot;color: #666666&quot;&gt;){&lt;/span&gt;
+            &lt;span style=&quot;color: #408080; font-style: italic&quot;&gt;// log error&lt;/span&gt;
+        &lt;span style=&quot;color: #666666&quot;&gt;}&lt;/span&gt;&lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;finally&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;{&lt;/span&gt;
+            &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;if&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;(&lt;/span&gt;inputStream &lt;span style=&quot;color: #666666&quot;&gt;!=&lt;/span&gt; &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;null&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;)&lt;/span&gt;
+                &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;try&lt;/span&gt; &lt;span style=&quot;color: #666666&quot;&gt;{&lt;/span&gt;
+                    inputStream&lt;span style=&quot;color: #666666&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #7D9029&quot;&gt;close&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;();&lt;/span&gt;
+            &lt;span style=&quot;color: #666666&quot;&gt;}&lt;/span&gt; &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;catch&lt;/span&gt; &lt;span style=&quot;color: #666666&quot;&gt;(&lt;/span&gt;IOException ex&lt;span style=&quot;color: #666666&quot;&gt;)&lt;/span&gt; &lt;span style=&quot;color: #666666&quot;&gt;{&lt;/span&gt;
+                &lt;span style=&quot;color: #408080; font-style: italic&quot;&gt;//log error again&lt;/span&gt;
+            &lt;span style=&quot;color: #666666&quot;&gt;}&lt;/span&gt;
+        &lt;span style=&quot;color: #666666&quot;&gt;}&lt;/span&gt;
+
+
+    &lt;span style=&quot;color: #666666&quot;&gt;}&lt;/span&gt;
+&lt;span style=&quot;color: #666666&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;With Java 7, the try-with-resources statements can tell the compiler to automatically
+close the resource when the block of code has finished executing. No finally block
+is needed again and our code becomes less verbose. See the previous below refactored
+with try-with-resources. Neat huh?&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&quot;TryWithResources.java&quot; class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;pygments highlight&quot;&gt;&lt;code data-lang=&quot;java&quot;&gt;&lt;span style=&quot;color: #666666&quot;&gt;...&lt;/span&gt;
+&lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;try&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;(&lt;/span&gt; InputStream stream &lt;span style=&quot;color: #666666&quot;&gt;=&lt;/span&gt; &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;new&lt;/span&gt; FileInputStream&lt;span style=&quot;color: #666666&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #BA2121&quot;&gt;&amp;quot;myFile.txt&amp;quot;&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;)){&lt;/span&gt;
+
+    &lt;span style=&quot;color: #408080; font-style: italic&quot;&gt;// do something with the stream&lt;/span&gt;
+
+&lt;span style=&quot;color: #666666&quot;&gt;}&lt;/span&gt;&lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;catch&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;(&lt;/span&gt;Exception ex&lt;span style=&quot;color: #666666&quot;&gt;){&lt;/span&gt;
+
+&lt;span style=&quot;color: #666666&quot;&gt;}&lt;/span&gt;
+&lt;span style=&quot;color: #666666&quot;&gt;...&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;improved_type_caching_for_rethrowing_exceptions_from_multiple_catch_blocks&quot;&gt;Improved Type Caching for Rethrowing Exceptions from Multiple Catch Blocks&lt;/h3&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;In order to fully understand this feature, let us analyze the code below:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&quot;ImprovedTypeCaching.java&quot; class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;pygments highlight&quot;&gt;&lt;code data-lang=&quot;java&quot;&gt;&lt;span style=&quot;color: #666666&quot;&gt;...&lt;/span&gt;
+&lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;class&lt;/span&gt; &lt;span style=&quot;color: #0000FF; font-weight: bold&quot;&gt;BrakeException&lt;/span&gt; &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;extends&lt;/span&gt; Exception&lt;span style=&quot;color: #666666&quot;&gt;{&lt;/span&gt;
+
+&lt;span style=&quot;color: #666666&quot;&gt;}&lt;/span&gt;
+&lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;class&lt;/span&gt; &lt;span style=&quot;color: #0000FF; font-weight: bold&quot;&gt;FuelException&lt;/span&gt; &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;extends&lt;/span&gt; Exception&lt;span style=&quot;color: #666666&quot;&gt;{&lt;/span&gt;
+
+&lt;span style=&quot;color: #666666&quot;&gt;}&lt;/span&gt;
+
+&lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;public&lt;/span&gt; &lt;span style=&quot;color: #B00040&quot;&gt;void&lt;/span&gt; &lt;span style=&quot;color: #0000FF&quot;&gt;rethrowException&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;(&lt;/span&gt;String exceptionName&lt;span style=&quot;color: #666666&quot;&gt;)&lt;/span&gt; &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;throws&lt;/span&gt; Exception &lt;span style=&quot;color: #666666&quot;&gt;{&lt;/span&gt;
+    &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;try&lt;/span&gt; &lt;span style=&quot;color: #666666&quot;&gt;{&lt;/span&gt;
+        &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;if&lt;/span&gt; &lt;span style=&quot;color: #666666&quot;&gt;(&lt;/span&gt;exceptionName&lt;span style=&quot;color: #666666&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #7D9029&quot;&gt;equals&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #BA2121&quot;&gt;&amp;quot;Brake&amp;quot;&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;))&lt;/span&gt; &lt;span style=&quot;color: #666666&quot;&gt;{&lt;/span&gt;
+        &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;throw&lt;/span&gt; &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;new&lt;/span&gt; BrakeException&lt;span style=&quot;color: #666666&quot;&gt;();&lt;/span&gt;
+        &lt;span style=&quot;color: #666666&quot;&gt;}&lt;/span&gt; &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;else&lt;/span&gt; &lt;span style=&quot;color: #666666&quot;&gt;{&lt;/span&gt;
+        &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;throw&lt;/span&gt; &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;new&lt;/span&gt; FuelException&lt;span style=&quot;color: #666666&quot;&gt;();&lt;/span&gt;
+        &lt;span style=&quot;color: #666666&quot;&gt;}&lt;/span&gt;
+    &lt;span style=&quot;color: #666666&quot;&gt;}&lt;/span&gt; &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;catch&lt;/span&gt; &lt;span style=&quot;color: #666666&quot;&gt;(&lt;/span&gt;Exception e&lt;span style=&quot;color: #666666&quot;&gt;)&lt;/span&gt; &lt;span style=&quot;color: #666666&quot;&gt;{&lt;/span&gt;
+        &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;throw&lt;/span&gt; e&lt;span style=&quot;color: #666666&quot;&gt;;&lt;/span&gt;
+    &lt;span style=&quot;color: #666666&quot;&gt;}&lt;/span&gt;
+&lt;span style=&quot;color: #666666&quot;&gt;}&lt;/span&gt;
+&lt;span style=&quot;color: #666666&quot;&gt;...&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;In this case, we want to process both fuel and brake exceptions
+the same way and throw them. Before Java 7, if this exception is thrown,
+there is no way for the rethrowException method to indicate that these
+&quot;Exception&quot;s are either fuel or brake. The type is lost in the compiling world.
+However, from Java 7, the java compiler can intuitively deduce that the exception
+object can be either a Fuel or a Brake exception by analyzing your catch clauses.
+The code can now be written as:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&quot;ImprovedTypeCaching.java&quot; class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;pygments highlight&quot;&gt;&lt;code data-lang=&quot;java&quot;&gt;&lt;span style=&quot;color: #666666&quot;&gt;...&lt;/span&gt;
+&lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;public&lt;/span&gt; &lt;span style=&quot;color: #B00040&quot;&gt;void&lt;/span&gt; &lt;span style=&quot;color: #0000FF&quot;&gt;rethrowExceptionUnique&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;(&lt;/span&gt;String exceptionName&lt;span style=&quot;color: #666666&quot;&gt;)&lt;/span&gt; &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;throws&lt;/span&gt; BrakeException&lt;span style=&quot;color: #666666&quot;&gt;,&lt;/span&gt; FuelException &lt;span style=&quot;color: #666666&quot;&gt;{&lt;/span&gt;
+    &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;try&lt;/span&gt; &lt;span style=&quot;color: #666666&quot;&gt;{&lt;/span&gt;
+        &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;if&lt;/span&gt; &lt;span style=&quot;color: #666666&quot;&gt;(&lt;/span&gt;exceptionName&lt;span style=&quot;color: #666666&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #7D9029&quot;&gt;equals&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #BA2121&quot;&gt;&amp;quot;Brake&amp;quot;&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;))&lt;/span&gt; &lt;span style=&quot;color: #666666&quot;&gt;{&lt;/span&gt;
+            &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;throw&lt;/span&gt; &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;new&lt;/span&gt; BrakeException&lt;span style=&quot;color: #666666&quot;&gt;();&lt;/span&gt;
+        &lt;span style=&quot;color: #666666&quot;&gt;}&lt;/span&gt; &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;else&lt;/span&gt; &lt;span style=&quot;color: #666666&quot;&gt;{&lt;/span&gt;
+            &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;throw&lt;/span&gt; &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;new&lt;/span&gt; FuelException&lt;span style=&quot;color: #666666&quot;&gt;();&lt;/span&gt;
+        &lt;span style=&quot;color: #666666&quot;&gt;}&lt;/span&gt;
+    &lt;span style=&quot;color: #666666&quot;&gt;}&lt;/span&gt; &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;catch&lt;/span&gt; &lt;span style=&quot;color: #666666&quot;&gt;(&lt;/span&gt;Exception e&lt;span style=&quot;color: #666666&quot;&gt;)&lt;/span&gt; &lt;span style=&quot;color: #666666&quot;&gt;{&lt;/span&gt;
+        &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;throw&lt;/span&gt; e&lt;span style=&quot;color: #666666&quot;&gt;;&lt;/span&gt;
+    &lt;span style=&quot;color: #666666&quot;&gt;}&lt;/span&gt;
+&lt;span style=&quot;color: #666666&quot;&gt;}&lt;/span&gt;
+&lt;span style=&quot;color: #666666&quot;&gt;...&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;With this, exceptions can handling becomes more comprehensive and readable because
+we are no longer forced to bunch exceptions together in one &quot;throws Exception&quot; clause in
+a method declaration.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;other_cool_features_you_may_not_know&quot;&gt;Other Cool Features you may not know&lt;/h3&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;In addition, java made other improvements in swing, networking, Rich Internet applications
+development, Java 2D, Java XML, JDBC and JVM, internationalization in addition
+to enhancements in the api of the java.lang.* and java.util.*;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;in_the_future&quot;&gt;In the future&lt;/h3&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Like I said, I am waiting to get my hands on java 9. I have not gotten into the
+cool stuff of java 8 ( will do that in my next java blog post ). It not only
+cool to look for awesome neglected features but it may prove to be helpful to you
+in your adventure towards clean code ( oh! I&amp;#8217;ll definitely make a post on clean code).&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;We will see soon;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;keep_koding_konstantly&quot;&gt;Keep Koding Konstantly&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        <pubDate>Mon, 30 Jan 2017 00:00:00 +0000</pubDate>
+        <link>//java/2017/01/30/first-java-blog.html</link>
+        <guid isPermaLink="true">//java/2017/01/30/first-java-blog.html</guid>
+        
+        <category>blog</category>
+        
+        
+        <category>Java</category>
+        
       </item>
-    {% endfor %}
+    
   </channel>
 </rss>

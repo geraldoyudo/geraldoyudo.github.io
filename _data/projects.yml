@@ -1,5 +1,0 @@
-# projects section data
-- name: 'UMAAS'
-  i18n: 'umaas'
-  img: 'static/img/landing/saplatform.png'
-  desc: 'UMAAS is a service that takes all the monotony of user management from the hands of the developer. With UMAAS, you have a centralized repository for users of your many applications, you can perform authentication, and send notification email and sms.'
