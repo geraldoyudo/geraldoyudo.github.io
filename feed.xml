@@ -5,8 +5,8 @@
     <description>Gerald&#39;s Blog</description>
     <link>//</link>
     <atom:link href="//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 22 Feb 2017 09:24:57 +0000</pubDate>
-    <lastBuildDate>Wed, 22 Feb 2017 09:24:57 +0000</lastBuildDate>
+    <pubDate>Wed, 22 Feb 2017 09:36:03 +0000</pubDate>
+    <lastBuildDate>Wed, 22 Feb 2017 09:36:03 +0000</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
@@ -38,9 +38,8 @@ features, check the blog: &lt;a href=&quot;https://www.sitepoint.com/ultimate-gu
 &lt;p&gt;Long story short, Java is about to get a lot more exciting
 - just like spring! But in order to harness these exciting features, we need to
 know some cool features that already exist from Java 7 and Java 8. According to
-a &lt;a href=&quot;https://plumbr.eu/blog/java/java-version-and-vendor-data-analyzed-2016-edition&quot; class=&quot;bare&quot;&gt;https://plumbr.eu/blog/java/java-version-and-vendor-data-analyzed-2016-edition&lt;/a&gt;
-[Java vendor analysis by  Nikita Salnikov-Tarnovski], it shows that Java 8 and 7
-adoption is little over 45 percent world-wide with Java 6 trailing at the bottom
+a &lt;a href=&quot;https://plumbr.eu/blog/java/java-version-and-vendor-data-analyzed-2016-edition&quot;&gt;Java vendor analysis by  Nikita Salnikov-Tarnovski&lt;/a&gt;,
+it shows that Java 8 and 7 adoption is little over 45 percent world-wide with Java 6 trailing at the bottom
 with little over 10 percent. This simply means that some developers do not see
 the need to upgrade. In this post, I will be discussing some of the exciting
 and beneficial features that have been introduced since Java 7.&lt;/p&gt;
