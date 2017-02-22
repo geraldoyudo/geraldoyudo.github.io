@@ -63,5 +63,6 @@ asciidoctor:
   safe: unsafe
   attributes:
     - idseparator=_
-    - source-highlighter=coderay
     - icons=font
+    - source-highlighter=pygments
+    - pygments-css=style

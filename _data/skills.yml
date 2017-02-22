@@ -11,7 +11,7 @@
 - name: NodeJS
   percentage: 70
 
-- name: AngularJS
+- name: AngularJS + Angular 2
   percentage: 80
 
 - name: Ionic

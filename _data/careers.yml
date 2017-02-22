@@ -1,9 +1,23 @@
 # careers section data
 - name:
+    detail: TeamAPT
+    i18n: teamapt
+  desc:
+    detail: Now I'm coding with young and vibrant developers at the peak of the fintech industry.
+    i18n: teamapt_des
+  date:
+    detail: Feb 2017
+    i18n: teamapt_date
+  job:
+    detail: Product Developer
+    i18n: teamapt_job
+  icon: fa-plus-square
+  
+- name:
     detail: Integrated Software Services Limited
     i18n: issl
   desc:
-    detail: Now I am in ISSLNG, where I develop mobile and web applications for clients.
+    detail: I developed mobile and web applications for clients.
     i18n: nextcode_des
   date:
     detail: July 2015
