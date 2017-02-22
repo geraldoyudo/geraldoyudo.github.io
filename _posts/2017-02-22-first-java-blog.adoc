@@ -32,9 +32,8 @@ features, check the blog: https://www.sitepoint.com/ultimate-guide-to-java-9/[Th
 Long story short, Java is about to get a lot more exciting 
 - just like spring! But in order to harness these exciting features, we need to 
 know some cool features that already exist from Java 7 and Java 8. According to 
-a https://plumbr.eu/blog/java/java-version-and-vendor-data-analyzed-2016-edition
-[Java vendor analysis by  Nikita Salnikov-Tarnovski], it shows that Java 8 and 7 
-adoption is little over 45 percent world-wide with Java 6 trailing at the bottom 
+a https://plumbr.eu/blog/java/java-version-and-vendor-data-analyzed-2016-edition[Java vendor analysis by  Nikita Salnikov-Tarnovski], 
+it shows that Java 8 and 7 adoption is little over 45 percent world-wide with Java 6 trailing at the bottom 
 with little over 10 percent. This simply means that some developers do not see 
 the need to upgrade. In this post, I will be discussing some of the exciting 
 and beneficial features that have been introduced since Java 7. 
