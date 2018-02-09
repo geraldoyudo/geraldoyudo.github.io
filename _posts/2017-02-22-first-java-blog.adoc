@@ -9,7 +9,7 @@ tags: [blog]
 icon: fa-bookmark-o
 ---
 
-Many of us are devoted lovers of the Java Programming language;  
+Many of us are lovers of the Java Programming language;  
 some of us use Java out of necessity, while others use it because it is fun 
 and neat to code with. Regardless of your reason to program with Java, there 
 is a 90 percent probability (well I just made that up) that you are monitoring 
