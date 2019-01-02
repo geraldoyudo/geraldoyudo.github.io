@@ -1,5 +1,16 @@
 # projects section data
-- name: 'UMAAS'
-  i18n: 'umaas'
+- name: 'Mmmadu'
+  i18n: 'mmadu'
   img: 'static/img/landing/saplatform.png'
-  desc: 'UMAAS is a service that takes all the monotony of user management from the hands of the developer. With UMAAS, you have a centralized repository for users of your many applications, you can perform authentication, and send notification email and sms.'
+  desc: 'Mmmadu is a service that takes all the monotony of user management from the hands of the developer. With Mmadu, you have a centralized repository for users of your many applications, you can perform authentication, and send notification email and sms.'
+- name: Terra
+  i18n: 'transaction-processor'
+  img: 'static/img/landing/transaction.png'
+  desc: 'An all purpose middleware for processing transactions, providing notification, approval, workflows and so on.'
+- name: Nlpc Mobile
+  i18n: 'nlpc-mobile'
+  img: 'static/img/landing/nlpc-mobile.png'
+  desc: A mobile application for pension fund management
+- name: NanoQuiz
+  i18n: 'nano-quiz'
+  img: 'static/img/landing/nano-quiz.jpg'

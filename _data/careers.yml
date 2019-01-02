@@ -1,9 +1,23 @@
 # careers section data
 - name:
+    detail: Aurea Software
+    i18n: aurea
+  desc:
+    detail: I am currently working with a team of developers around the world to build and maintain world-class software.
+    i18n: aurea_des
+  date:
+    detail: Feb 2017
+    i18n: teamapt_date
+  job:
+    detail: Product Developer
+    i18n: teamapt_job
+  icon: fa-plus-square
+  
+- name:
     detail: TeamAPT
     i18n: teamapt
   desc:
-    detail: Now I'm coding with young and vibrant developers at the peak of the fintech industry.
+    detail: I collaborated with young and vibrant developers at the peak of the fintech industry to develop fintech solutions.
     i18n: teamapt_des
   date:
     detail: Feb 2017

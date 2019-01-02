@@ -1,17 +1,17 @@
 # skills section data
 - name: Java
-  percentage: 85
+  percentage: 90
 
 - name: HTML/CSS
-  percentage: 65
+  percentage: 80
 
 - name: Spring
-  percentage: 80
+  percentage: 90
 
 - name: NodeJS
   percentage: 70
 
-- name: AngularJS + Angular 2
+- name: Angular
   percentage: 80
 
 - name: Ionic
@@ -19,3 +19,9 @@
 
 - name: Python
   percentage: 50
+
+- name: React
+  percentage: 50
+
+- name: Matlab
+  percentage: 80
