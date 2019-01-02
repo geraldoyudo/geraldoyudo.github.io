@@ -5,9 +5,25 @@
     <description>Gerald&#39;s Blog</description>
     <link>//</link>
     <atom:link href="//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 22 Feb 2017 09:36:03 +0000</pubDate>
-    <lastBuildDate>Wed, 22 Feb 2017 09:36:03 +0000</lastBuildDate>
+    <pubDate>Wed, 02 Jan 2019 21:50:39 +0000</pubDate>
+    <lastBuildDate>Wed, 02 Jan 2019 21:50:39 +0000</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>HyperLedger Sawtooth: Adventures</title>
+        <description>&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Hyperledger Sawtooth&lt;/p&gt;
+&lt;/div&gt;</description>
+        <pubDate>Fri, 09 Feb 2018 00:00:00 +0000</pubDate>
+        <link>//development/2018/02/09/hyperledger-sawtooth-adventures.html</link>
+        <guid isPermaLink="true">//development/2018/02/09/hyperledger-sawtooth-adventures.html</guid>
+        
+        <category>blog</category>
+        
+        
+        <category>development</category>
+        
+      </item>
     
       <item>
         <title>First Post!!! In Preparation For Java 9</title>
@@ -76,7 +92,7 @@ can be much more readable. Look at the sample below:&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&quot;UnderscoresNumericLiterals.java&quot; class=&quot;listingblock&quot;&gt;
 &lt;div class=&quot;content&quot;&gt;
-&lt;pre class=&quot;pygments highlight&quot;&gt;&lt;code data-lang=&quot;java&quot;&gt;&lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;public&lt;/span&gt; &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;class&lt;/span&gt; &lt;span style=&quot;color: #0000FF; font-weight: bold&quot;&gt;UnderscoresNumericLiterals&lt;/span&gt; &lt;span style=&quot;color: #666666&quot;&gt;{&lt;/span&gt;
+&lt;pre class=&quot;pygments highlight&quot;&gt;&lt;code data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;public&lt;/span&gt; &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;class&lt;/span&gt; &lt;span style=&quot;color: #0000FF; font-weight: bold&quot;&gt;UnderscoresNumericLiterals&lt;/span&gt; &lt;span style=&quot;color: #666666&quot;&gt;{&lt;/span&gt;
 
     &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;public&lt;/span&gt; &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;static&lt;/span&gt; &lt;span style=&quot;color: #B00040&quot;&gt;void&lt;/span&gt; &lt;span style=&quot;color: #0000FF&quot;&gt;main&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;(&lt;/span&gt;String&lt;span style=&quot;color: #666666&quot;&gt;[]&lt;/span&gt; args&lt;span style=&quot;color: #666666&quot;&gt;){&lt;/span&gt;
         &lt;span style=&quot;color: #B00040&quot;&gt;long&lt;/span&gt; aReallyLargeNumber &lt;span style=&quot;color: #666666&quot;&gt;=&lt;/span&gt; &lt;span style=&quot;color: #666666&quot;&gt;1_234_553_000_000L;&lt;/span&gt;
@@ -101,7 +117,7 @@ you can directly save a numeric literal in binary form. Look at the snippet belo
 &lt;/div&gt;
 &lt;div id=&quot;BinaryLiterals.java&quot; class=&quot;listingblock&quot;&gt;
 &lt;div class=&quot;content&quot;&gt;
-&lt;pre class=&quot;pygments highlight&quot;&gt;&lt;code data-lang=&quot;java&quot;&gt;&lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;public&lt;/span&gt; &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;class&lt;/span&gt; &lt;span style=&quot;color: #0000FF; font-weight: bold&quot;&gt;BinaryLiterals&lt;/span&gt; &lt;span style=&quot;color: #666666&quot;&gt;{&lt;/span&gt;
+&lt;pre class=&quot;pygments highlight&quot;&gt;&lt;code data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;public&lt;/span&gt; &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;class&lt;/span&gt; &lt;span style=&quot;color: #0000FF; font-weight: bold&quot;&gt;BinaryLiterals&lt;/span&gt; &lt;span style=&quot;color: #666666&quot;&gt;{&lt;/span&gt;
     &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;public&lt;/span&gt; &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;static&lt;/span&gt; &lt;span style=&quot;color: #B00040&quot;&gt;void&lt;/span&gt; &lt;span style=&quot;color: #0000FF&quot;&gt;main&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;(&lt;/span&gt;String&lt;span style=&quot;color: #666666&quot;&gt;[]&lt;/span&gt; args&lt;span style=&quot;color: #666666&quot;&gt;){&lt;/span&gt;
         &lt;span style=&quot;color: #B00040&quot;&gt;int&lt;/span&gt; firstDigit &lt;span style=&quot;color: #666666&quot;&gt;=&lt;/span&gt; &lt;span style=&quot;color: #666666&quot;&gt;0b101;&lt;/span&gt;
         &lt;span style=&quot;color: #B00040&quot;&gt;int&lt;/span&gt; secondDigit &lt;span style=&quot;color: #666666&quot;&gt;=&lt;/span&gt; &lt;span style=&quot;color: #666666&quot;&gt;0xaf;&lt;/span&gt;
@@ -137,7 +153,7 @@ string switch statement:&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&quot;StringSwitchStatements.java&quot; class=&quot;listingblock&quot;&gt;
 &lt;div class=&quot;content&quot;&gt;
-&lt;pre class=&quot;pygments highlight&quot;&gt;&lt;code data-lang=&quot;java&quot;&gt;    &lt;span style=&quot;color: #666666&quot;&gt;...&lt;/span&gt;
+&lt;pre class=&quot;pygments highlight&quot;&gt;&lt;code data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;    &lt;span style=&quot;color: #666666&quot;&gt;...&lt;/span&gt;
 
     &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;if&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;(&lt;/span&gt;args&lt;span style=&quot;color: #666666&quot;&gt;[0].&lt;/span&gt;&lt;span style=&quot;color: #7D9029&quot;&gt;equals&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #BA2121&quot;&gt;&amp;quot;value1&amp;quot;&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;)){&lt;/span&gt;
         &lt;span style=&quot;color: #408080; font-style: italic&quot;&gt;// do something with value 1&lt;/span&gt;
@@ -161,7 +177,7 @@ string switch statement:&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&quot;StringSwitchStatements.java&quot; class=&quot;listingblock&quot;&gt;
 &lt;div class=&quot;content&quot;&gt;
-&lt;pre class=&quot;pygments highlight&quot;&gt;&lt;code data-lang=&quot;java&quot;&gt;    &lt;span style=&quot;color: #666666&quot;&gt;...&lt;/span&gt;
+&lt;pre class=&quot;pygments highlight&quot;&gt;&lt;code data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;    &lt;span style=&quot;color: #666666&quot;&gt;...&lt;/span&gt;
     &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;switch&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;(&lt;/span&gt;args&lt;span style=&quot;color: #666666&quot;&gt;[0]){&lt;/span&gt;
         &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;case&lt;/span&gt; &lt;span style=&quot;color: #BA2121&quot;&gt;&amp;quot;value1&amp;quot;&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;:{&lt;/span&gt;
             &lt;span style=&quot;color: #408080; font-style: italic&quot;&gt;// do something with value 1&lt;/span&gt;
@@ -211,7 +227,7 @@ we do all the time is declaring a generic type - for example a String array list
 &lt;/div&gt;
 &lt;div id=&quot;GenericTypeInference.java&quot; class=&quot;listingblock&quot;&gt;
 &lt;div class=&quot;content&quot;&gt;
-&lt;pre class=&quot;pygments highlight&quot;&gt;&lt;code data-lang=&quot;java&quot;&gt; ArrayList&lt;span style=&quot;color: #666666&quot;&gt;&amp;lt;&lt;/span&gt;String&lt;span style=&quot;color: #666666&quot;&gt;&amp;gt;&lt;/span&gt; myStringList &lt;span style=&quot;color: #666666&quot;&gt;=&lt;/span&gt; &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;new&lt;/span&gt; ArrayList&lt;span style=&quot;color: #666666&quot;&gt;&amp;lt;&lt;/span&gt;String&lt;span style=&quot;color: #666666&quot;&gt;&amp;gt;();&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&quot;pygments highlight&quot;&gt;&lt;code data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt; ArrayList&lt;span style=&quot;color: #666666&quot;&gt;&amp;lt;&lt;/span&gt;String&lt;span style=&quot;color: #666666&quot;&gt;&amp;gt;&lt;/span&gt; myStringList &lt;span style=&quot;color: #666666&quot;&gt;=&lt;/span&gt; &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;new&lt;/span&gt; ArrayList&lt;span style=&quot;color: #666666&quot;&gt;&amp;lt;&lt;/span&gt;String&lt;span style=&quot;color: #666666&quot;&gt;&amp;gt;();&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;paragraph&quot;&gt;
@@ -254,7 +270,8 @@ below:&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&quot;TryWithResources.java&quot; class=&quot;listingblock&quot;&gt;
 &lt;div class=&quot;content&quot;&gt;
-&lt;pre class=&quot;pygments highlight&quot;&gt;&lt;code data-lang=&quot;java&quot;&gt;&lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;public&lt;/span&gt; &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;class&lt;/span&gt; &lt;span style=&quot;color: #0000FF; font-weight: bold&quot;&gt;TryWithResources&lt;/span&gt; &lt;span style=&quot;color: #666666&quot;&gt;{&lt;/span&gt;
+&lt;pre class=&quot;pygments highlight&quot;&gt;&lt;code data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;
+&lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;public&lt;/span&gt; &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;class&lt;/span&gt; &lt;span style=&quot;color: #0000FF; font-weight: bold&quot;&gt;TryWithResources&lt;/span&gt; &lt;span style=&quot;color: #666666&quot;&gt;{&lt;/span&gt;
     &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;public&lt;/span&gt; &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;static&lt;/span&gt; &lt;span style=&quot;color: #B00040&quot;&gt;void&lt;/span&gt; &lt;span style=&quot;color: #0000FF&quot;&gt;main&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;(&lt;/span&gt;String&lt;span style=&quot;color: #666666&quot;&gt;[]&lt;/span&gt; args&lt;span style=&quot;color: #666666&quot;&gt;){&lt;/span&gt;
         InputStream inputStream &lt;span style=&quot;color: #666666&quot;&gt;=&lt;/span&gt; &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;null&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;;&lt;/span&gt;
         &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;try&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;{&lt;/span&gt;
@@ -284,7 +301,8 @@ with try-with-resources. Neat huh?&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&quot;TryWithResources.java&quot; class=&quot;listingblock&quot;&gt;
 &lt;div class=&quot;content&quot;&gt;
-&lt;pre class=&quot;pygments highlight&quot;&gt;&lt;code data-lang=&quot;java&quot;&gt;&lt;span style=&quot;color: #666666&quot;&gt;...&lt;/span&gt;
+&lt;pre class=&quot;pygments highlight&quot;&gt;&lt;code data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;
+&lt;span style=&quot;color: #666666&quot;&gt;...&lt;/span&gt;
 &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;try&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;(&lt;/span&gt; InputStream stream &lt;span style=&quot;color: #666666&quot;&gt;=&lt;/span&gt; &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;new&lt;/span&gt; FileInputStream&lt;span style=&quot;color: #666666&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #BA2121&quot;&gt;&amp;quot;myFile.txt&amp;quot;&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;)){&lt;/span&gt;
 
     &lt;span style=&quot;color: #408080; font-style: italic&quot;&gt;// do something with the stream&lt;/span&gt;
@@ -303,7 +321,8 @@ with try-with-resources. Neat huh?&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&quot;ImprovedTypeCaching.java&quot; class=&quot;listingblock&quot;&gt;
 &lt;div class=&quot;content&quot;&gt;
-&lt;pre class=&quot;pygments highlight&quot;&gt;&lt;code data-lang=&quot;java&quot;&gt;&lt;span style=&quot;color: #666666&quot;&gt;...&lt;/span&gt;
+&lt;pre class=&quot;pygments highlight&quot;&gt;&lt;code data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;
+&lt;span style=&quot;color: #666666&quot;&gt;...&lt;/span&gt;
 &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;class&lt;/span&gt; &lt;span style=&quot;color: #0000FF; font-weight: bold&quot;&gt;BrakeException&lt;/span&gt; &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;extends&lt;/span&gt; Exception&lt;span style=&quot;color: #666666&quot;&gt;{&lt;/span&gt;
 
 &lt;span style=&quot;color: #666666&quot;&gt;}&lt;/span&gt;
@@ -336,7 +355,8 @@ The code can now be written as:&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&quot;ImprovedTypeCaching.java&quot; class=&quot;listingblock&quot;&gt;
 &lt;div class=&quot;content&quot;&gt;
-&lt;pre class=&quot;pygments highlight&quot;&gt;&lt;code data-lang=&quot;java&quot;&gt;&lt;span style=&quot;color: #666666&quot;&gt;...&lt;/span&gt;
+&lt;pre class=&quot;pygments highlight&quot;&gt;&lt;code data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;
+&lt;span style=&quot;color: #666666&quot;&gt;...&lt;/span&gt;
 &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;public&lt;/span&gt; &lt;span style=&quot;color: #B00040&quot;&gt;void&lt;/span&gt; &lt;span style=&quot;color: #0000FF&quot;&gt;rethrowExceptionUnique&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;(&lt;/span&gt;String exceptionName&lt;span style=&quot;color: #666666&quot;&gt;)&lt;/span&gt; &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;throws&lt;/span&gt; BrakeException&lt;span style=&quot;color: #666666&quot;&gt;,&lt;/span&gt; FuelException &lt;span style=&quot;color: #666666&quot;&gt;{&lt;/span&gt;
     &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;try&lt;/span&gt; &lt;span style=&quot;color: #666666&quot;&gt;{&lt;/span&gt;
         &lt;span style=&quot;color: #008000; font-weight: bold&quot;&gt;if&lt;/span&gt; &lt;span style=&quot;color: #666666&quot;&gt;(&lt;/span&gt;exceptionName&lt;span style=&quot;color: #666666&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #7D9029&quot;&gt;equals&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #BA2121&quot;&gt;&amp;quot;Brake&amp;quot;&lt;/span&gt;&lt;span style=&quot;color: #666666&quot;&gt;))&lt;/span&gt; &lt;span style=&quot;color: #666666&quot;&gt;{&lt;/span&gt;
