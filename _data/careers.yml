@@ -6,10 +6,10 @@
     detail: I am currently working with a team of developers around the world to build and maintain world-class software.
     i18n: aurea_des
   date:
-    detail: Feb 2017
+    detail: July 2018
     i18n: teamapt_date
   job:
-    detail: Product Developer
+    detail: Java Software Engineer
     i18n: teamapt_job
   icon: fa-plus-square
   
