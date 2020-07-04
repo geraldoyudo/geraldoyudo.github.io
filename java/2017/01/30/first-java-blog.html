@@ -289,7 +289,7 @@ can be much more readable. Look at the sample below:</p>
 </div>
 <div id="UnderscoresNumericLiterals.java" class="listingblock">
 <div class="content">
-<pre class="pygments highlight"><code data-lang="java"><span></span><span style="color: #008000; font-weight: bold">public</span> <span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">UnderscoresNumericLiterals</span> <span style="color: #666666">{</span>
+<pre class="pygments highlight" style="background: #f8f8f8;"><code data-lang="java"><span></span><span style="color: #008000; font-weight: bold">public</span> <span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">UnderscoresNumericLiterals</span> <span style="color: #666666">{</span>
 
     <span style="color: #008000; font-weight: bold">public</span> <span style="color: #008000; font-weight: bold">static</span> <span style="color: #B00040">void</span> <span style="color: #0000FF">main</span><span style="color: #666666">(</span>String<span style="color: #666666">[]</span> args<span style="color: #666666">){</span>
         <span style="color: #B00040">long</span> aReallyLargeNumber <span style="color: #666666">=</span> <span style="color: #666666">1_234_553_000_000L;</span>
@@ -314,7 +314,7 @@ you can directly save a numeric literal in binary form. Look at the snippet belo
 </div>
 <div id="BinaryLiterals.java" class="listingblock">
 <div class="content">
-<pre class="pygments highlight"><code data-lang="java"><span></span><span style="color: #008000; font-weight: bold">public</span> <span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">BinaryLiterals</span> <span style="color: #666666">{</span>
+<pre class="pygments highlight" style="background: #f8f8f8;"><code data-lang="java"><span></span><span style="color: #008000; font-weight: bold">public</span> <span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">BinaryLiterals</span> <span style="color: #666666">{</span>
     <span style="color: #008000; font-weight: bold">public</span> <span style="color: #008000; font-weight: bold">static</span> <span style="color: #B00040">void</span> <span style="color: #0000FF">main</span><span style="color: #666666">(</span>String<span style="color: #666666">[]</span> args<span style="color: #666666">){</span>
         <span style="color: #B00040">int</span> firstDigit <span style="color: #666666">=</span> <span style="color: #666666">0b101;</span>
         <span style="color: #B00040">int</span> secondDigit <span style="color: #666666">=</span> <span style="color: #666666">0xaf;</span>
@@ -350,7 +350,7 @@ string switch statement:</p>
 </div>
 <div id="StringSwitchStatements.java" class="listingblock">
 <div class="content">
-<pre class="pygments highlight"><code data-lang="java"><span></span>    <span style="color: #666666">...</span>
+<pre class="pygments highlight" style="background: #f8f8f8;"><code data-lang="java"><span></span>    <span style="color: #666666">...</span>
 
     <span style="color: #008000; font-weight: bold">if</span><span style="color: #666666">(</span>args<span style="color: #666666">[0].</span><span style="color: #7D9029">equals</span><span style="color: #666666">(</span><span style="color: #BA2121">&quot;value1&quot;</span><span style="color: #666666">)){</span>
         <span style="color: #408080; font-style: italic">// do something with value 1</span>
@@ -374,7 +374,7 @@ string switch statement:</p>
 </div>
 <div id="StringSwitchStatements.java" class="listingblock">
 <div class="content">
-<pre class="pygments highlight"><code data-lang="java"><span></span>    <span style="color: #666666">...</span>
+<pre class="pygments highlight" style="background: #f8f8f8;"><code data-lang="java"><span></span>    <span style="color: #666666">...</span>
     <span style="color: #008000; font-weight: bold">switch</span><span style="color: #666666">(</span>args<span style="color: #666666">[0]){</span>
         <span style="color: #008000; font-weight: bold">case</span> <span style="color: #BA2121">&quot;value1&quot;</span><span style="color: #666666">:{</span>
             <span style="color: #408080; font-style: italic">// do something with value 1</span>
@@ -424,18 +424,16 @@ we do all the time is declaring a generic type - for example a String array list
 </div>
 <div id="GenericTypeInference.java" class="listingblock">
 <div class="content">
-<pre class="pygments highlight"><code data-lang="java"><span></span> ArrayList<span style="color: #666666">&lt;</span>String<span style="color: #666666">&gt;</span> myStringList <span style="color: #666666">=</span> <span style="color: #008000; font-weight: bold">new</span> ArrayList<span style="color: #666666">&lt;</span>String<span style="color: #666666">&gt;();</span></code></pre>
+<pre class="pygments highlight" style="background: #f8f8f8;"><code data-lang="java"><span></span> ArrayList<span style="color: #666666">&lt;</span>String<span style="color: #666666">&gt;</span> myStringList <span style="color: #666666">=</span> <span style="color: #008000; font-weight: bold">new</span> ArrayList<span style="color: #666666">&lt;</span>String<span style="color: #666666">&gt;();</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>The annoying question we ask ourselves all the time is:</p>
 </div>
-<div class="quoteblock">
-<blockquote>
 <div class="paragraph">
-<p>Why the heck do we need to specify generic arguments twice?</p>
-</div>
-</blockquote>
+<p>""
+Why the heck do we need to specify generic arguments twice?
+""</p>
 </div>
 <div class="paragraph">
 <p>We may not understand how annoying this is unless we try something a little bit
@@ -467,7 +465,7 @@ below:</p>
 </div>
 <div id="TryWithResources.java" class="listingblock">
 <div class="content">
-<pre class="pygments highlight"><code data-lang="java"><span></span>
+<pre class="pygments highlight" style="background: #f8f8f8;"><code data-lang="java"><span></span>
 <span style="color: #008000; font-weight: bold">public</span> <span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">TryWithResources</span> <span style="color: #666666">{</span>
     <span style="color: #008000; font-weight: bold">public</span> <span style="color: #008000; font-weight: bold">static</span> <span style="color: #B00040">void</span> <span style="color: #0000FF">main</span><span style="color: #666666">(</span>String<span style="color: #666666">[]</span> args<span style="color: #666666">){</span>
         InputStream inputStream <span style="color: #666666">=</span> <span style="color: #008000; font-weight: bold">null</span><span style="color: #666666">;</span>
@@ -498,7 +496,7 @@ with try-with-resources. Neat huh?</p>
 </div>
 <div id="TryWithResources.java" class="listingblock">
 <div class="content">
-<pre class="pygments highlight"><code data-lang="java"><span></span>
+<pre class="pygments highlight" style="background: #f8f8f8;"><code data-lang="java"><span></span>
 <span style="color: #666666">...</span>
 <span style="color: #008000; font-weight: bold">try</span><span style="color: #666666">(</span> InputStream stream <span style="color: #666666">=</span> <span style="color: #008000; font-weight: bold">new</span> FileInputStream<span style="color: #666666">(</span><span style="color: #BA2121">&quot;myFile.txt&quot;</span><span style="color: #666666">)){</span>
 
@@ -518,7 +516,7 @@ with try-with-resources. Neat huh?</p>
 </div>
 <div id="ImprovedTypeCaching.java" class="listingblock">
 <div class="content">
-<pre class="pygments highlight"><code data-lang="java"><span></span>
+<pre class="pygments highlight" style="background: #f8f8f8;"><code data-lang="java"><span></span>
 <span style="color: #666666">...</span>
 <span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">BrakeException</span> <span style="color: #008000; font-weight: bold">extends</span> Exception<span style="color: #666666">{</span>
 
@@ -552,7 +550,7 @@ The code can now be written as:</p>
 </div>
 <div id="ImprovedTypeCaching.java" class="listingblock">
 <div class="content">
-<pre class="pygments highlight"><code data-lang="java"><span></span>
+<pre class="pygments highlight" style="background: #f8f8f8;"><code data-lang="java"><span></span>
 <span style="color: #666666">...</span>
 <span style="color: #008000; font-weight: bold">public</span> <span style="color: #B00040">void</span> <span style="color: #0000FF">rethrowExceptionUnique</span><span style="color: #666666">(</span>String exceptionName<span style="color: #666666">)</span> <span style="color: #008000; font-weight: bold">throws</span> BrakeException<span style="color: #666666">,</span> FuelException <span style="color: #666666">{</span>
     <span style="color: #008000; font-weight: bold">try</span> <span style="color: #666666">{</span>
