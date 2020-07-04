@@ -16,7 +16,7 @@
   img: 'static/img/landing/nano-quiz.jpg'
 - name: Apt Pay
   i18n: apt-Pay
-  img: 'static/img/payments.png'
+  img: 'static/img/landing/payments.png'
 - name: Kuwego Loans
   i18n: kuwego-loans
-  img: 'static/img/loans.png'
+  img: 'static/img/landing/loans.png'
