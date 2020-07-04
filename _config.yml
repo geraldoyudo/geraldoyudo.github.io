@@ -3,7 +3,7 @@
 # Website settings
 title: "Prime Devs"
 description: "Gerald's Blog"
-keywords: "Gerald, Prime Devs,Jalpc,blog,Jekyll,github,gh-pages"
+keywords: "Gerald, Prime Devs,blog,Jekyll,github,gh-pages,java,spring,development"
 baseurl: "/"
 # url: "http://127.0.0.1:4000"
 
@@ -16,7 +16,7 @@ author:
   facebook_username: 'gerald_oyudo'
   github_username: 'geraldoyudo'
   avatar: 'static/img/landing/Gerald.jpg'
-  desc: 'I am a full stack developer who play with new technologies and learn about new concepts. I believe that programming is key to technological development'
+  desc: 'My primary goal is to make life easier and worthwhile for software developers. I see myself in the academic field mentoring young computer programmers and researching on ways to make programming easier to learn. Software development is  solving a problem, and with this view, I focus on why things are done with the aim of improving processes and standards.I love learning about software development and I firmly believe that programming is the key to harnessing the immense capabilities of a computer. I develop applications during my free time. I look forward to solving complex problem with a software.'
 
 # comment
 changyan:

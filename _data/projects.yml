@@ -14,3 +14,9 @@
 - name: NanoQuiz
   i18n: 'nano-quiz'
   img: 'static/img/landing/nano-quiz.jpg'
+- name: Apt Pay
+  i18n: apt-Pay
+  img: 'static/img/payments.png'
+- name: Kuwego Loans
+  i18n: kuwego-loans
+  img: 'static/img/loans.png'

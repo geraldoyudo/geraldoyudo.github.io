@@ -1,9 +1,37 @@
 # careers section data
 - name:
+    detail: Neueda Technologies FS
+    i18n: neueda
+  desc:
+    detail: Developing Cloud Native solutions with AWS
+    i18n: neueda_desc
+  date:
+    detail: June 2020
+    i18n: neueda_date
+  job:
+    detail: Enterprise Architect
+    i18n: neueda_job
+  icon: fa-plus-square
+
+- name:
+    detail: TeamApt
+    i18n: teamapt_enterprise
+  desc:
+    detail: I came back as an Enterprise Architect at TeamApt, to design and build AptPay, a payment infrastructure for banks; and Kuwego Loans and Savings, a micro loans and savings platform.
+    i18n: teamapt_enterprise_desc
+  date:
+    detail: February 2019
+    i18n: teamapt_entrerprise_date
+  job:
+    detail: Enterprise Architect
+    i18n: temapat_enterprise_job
+  icon: fa-plus-square
+
+- name:
     detail: Aurea Software
     i18n: aurea
   desc:
-    detail: I am currently working with a team of developers around the world to build and maintain world-class software.
+    detail: I worked with developers around the world to maintaine Jive Community software, a social network for corporate environments.
     i18n: aurea_des
   date:
     detail: July 2018

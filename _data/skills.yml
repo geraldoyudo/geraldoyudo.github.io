@@ -25,3 +25,12 @@
 
 - name: Matlab
   percentage: 80
+
+- name: Docker
+  percentage: 70
+
+- name: Kubernetes
+  percentage: 60
+
+- name: Cloud Native
+  percentage: 60
