@@ -1,5 +1,5 @@
 # projects section data
-- name: 'Mmmadu'
+- name: 'Mmadu'
   i18n: 'mmadu'
   img: 'static/img/landing/saplatform.png'
   desc: 'Mmmadu is a service that takes all the monotony of user management from the hands of the developer. With Mmadu, you have a centralized repository for users of your many applications, you can perform authentication, and send notification email and sms.'
