@@ -6,7 +6,6 @@ script: bundle exec rake deploy
 before_script:
 - git config --global user.email "gerald.oyudo@gmail.com"
 - git config --global user.name "Gerald Oyudo"
-- gem i bundler -v 1.17.3
 env:
   global:
     secure: Vjh0Pv35fxHUh1K7vWZqX8e2bsRGx+/19hTEtnaYHRvRdw2hYJG8nvQ0QaKB27eADi6i3gKCzD8WxTEm8b5dwFl47Ud7S8M61rbkxM8z51Uj3l+rz0yrJjI47nbdcEtvCKpE+wy73UtOITqQYYJpNVJBONyJxwtFxsz/XiNV+5xcO1Li/icxUhqNSpl5QLZfASd9WfUIa6tPJ08dZ6sDpMOqE8df49fb/MhUSuDy6UfM5CrSKdVrLWJaEYePflXGP/qML2JKcI1Ep8fsvNKclK/5qK+WBtFbxH46vJpxrEBHo1Lvlp9alzwc4kTxVsjWF2vcnwC9EpOaZbBJFLcge0N/c5QLTnkyKkErj9xAASjEKwPomcd65OapzOGibw7NsS9JuZf1ShqqHNQZBhmmtn06Aim3GjUqK+OIzGvB858nXOEThH2K5KlgtlMv2efcymN93V2kXY5HckenT69RdzfZsuhZawcGTLRZfOYcO6fdM7zNKLUpztpmG9MnfR/FUYold/uPTb2pIISOm0y/exWZGtl+FFRGrqskqrLujTdm/pzmUuDPnRVkE/iHpl5czSU1mkvhjq0VvqASTlKnI/dUSDsXen7I3dJmC0JkBS3d/Dp81t2D7eYRgKeFKUDyXLwD6smA7DcjV+ELsWCrBFitgeAU1ft02fmvwb68ljI=
